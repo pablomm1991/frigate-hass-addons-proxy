@@ -1,22 +1,22 @@
-name: Frigate Proxy
+name: Prueba Proxy
 version: "1.4"
-panel_icon: "mdi:cctv"
-panel_title: Frigate
-slug: frigate-proxy
-description: Proxy addon for Frigate
+panel_icon: "mdi:alert-circle-outline"
+panel_title: Prueba Proxy
+slug: prueba-proxy
+description: Proxy addon for Prueba
 url: "https://github.com/blakeblackshear/frigate"
 startup: application
 boot: auto
-webui: "http://[HOST]:[PORT:5000]/"
-watchdog: "http://[HOST]:[PORT:5000]/"
+webui: "http://[HOST]:[PORT:81]/"
+watchdog: "http://[HOST]:[PORT:81]/"
 ingress: true
-ingress_port: 5000
+ingress_port: 81
 ingress_entry: /
 panel_admin: false
 ports:
-  5000/tcp: 5000
+  81/tcp: 81
 ports_description:
-  5000/tcp: Web interface (Not required for Hass.io Ingress)
+  81/tcp: Web interface (Not required for Hass.io Ingress)
 host_network: false
 devices: []
 usb: false
@@ -24,7 +24,7 @@ tmpfs: false
 full_access: false
 environment: {}
 options:
-  server: "http://frigate.local:5000"
+  server: "http://prueba.local:81"
   proxy_pass_host: true
 schema:
   server: "match(^https?://.+:\\d+$)"
